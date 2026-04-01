@@ -36,7 +36,7 @@ function Settings() {
 
   const fetchSettings = async () => {
     try {
-      const response = await fetch("http://localhost:7500/api/v1/admin/settings");
+      const response = await fetch("https://api.hargunmusicals.com/api/v1/admin/settings");
       const data = await response.json();
       console.log(data);
       setSettings(data.data);
@@ -72,7 +72,7 @@ function Settings() {
 
     try {
       const response = await axios.put(
-        `http://localhost:7500/api/v1/admin/settings/${settings._id}`,
+        `https://api.hargunmusicals.com/api/v1/admin/settings/${settings._id}`,
         settings
       );
 

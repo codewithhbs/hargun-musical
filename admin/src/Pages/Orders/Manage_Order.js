@@ -21,7 +21,7 @@ const ManageOrder = () => {
   const fetchOrders = async (page) => {
     try {
       setLoading(true);
-      const response = await fetch(`http://localhost:7500/api/v1/admin/get-all-order?page=${page}&limit=6`);
+      const response = await fetch(`https://api.hargunmusicals.com/api/v1/admin/get-all-order?page=${page}&limit=6`);
       const responseData = await response.json();
       const { data, totalPages } = responseData;
       setOrders(data);
@@ -43,7 +43,7 @@ const ManageOrder = () => {
     try {
       console.log("orderId, status", orderId, status);
       setLoading(true);
-      const response = await fetch("http://localhost:7500/api/v1/admin/change-order-status", {
+      const response = await fetch("https://api.hargunmusicals.com/api/v1/admin/change-order-status", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -63,7 +63,7 @@ const ManageOrder = () => {
     if (window.confirm("Are you sure you want to delete this order?")) {
       try {
         setLoading(true);
-        await fetch(`http://localhost:7500/api/v1/admin/delete-order/${orderId}`, {
+        await fetch(`https://api.hargunmusicals.com/api/v1/admin/delete-order/${orderId}`, {
           method: 'DELETE',
         });
         fetchOrders(currentPage);

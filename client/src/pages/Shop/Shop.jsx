@@ -236,9 +236,9 @@ const Shop = () => {
       setLoading(true);
       try {
         const [prodRes, catRes, brandRes] = await Promise.all([
-          axios.get("http://localhost:7500/api/v1/get-product"),
-          axios.get("http://localhost:7500/api/v1/admin/category"),
-          axios.get("http://localhost:7500/api/v1/admin/brand"),
+          axios.get("https://api.hargunmusicals.com/api/v1/get-product"),
+          axios.get("https://api.hargunmusicals.com/api/v1/admin/category"),
+          axios.get("https://api.hargunmusicals.com/api/v1/admin/brand"),
         ]);
         setAllProducts(prodRes.data.products || []);
         setAllCategories(catRes.data.categories || []);

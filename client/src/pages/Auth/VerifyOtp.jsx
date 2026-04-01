@@ -289,7 +289,7 @@ const VerifyOtp = ({ onVerificationSuccess }) => {
 
     try {
       const response = await fetch(
-        "http://localhost:7500/api/v1/verify-otp",
+        "https://api.hargunmusicals.com/api/v1/verify-otp",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -328,7 +328,7 @@ const VerifyOtp = ({ onVerificationSuccess }) => {
 
     try {
       const response = await fetch(
-        "http://localhost:7500/api/v1/resend-otp",
+        "https://api.hargunmusicals.com/api/v1/resend-otp",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

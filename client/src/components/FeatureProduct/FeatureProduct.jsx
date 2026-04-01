@@ -13,7 +13,7 @@ const FeatureProduct = () => {
   const handleFetchProduct = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:7500/api/v1/get-product",
+        "https://api.hargunmusicals.com/api/v1/get-product",
       );
       setAllProduct(data.products);
     } catch (error) {

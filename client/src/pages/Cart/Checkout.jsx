@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
 // ─── CONFIG ───────────────────────────────────────────────────────────────────
-const API_BASE = 'http://localhost:7500/api/v1'
+const API_BASE = 'https://api.hargunmusicals.com/api/v1'
 const CART_KEY = 'cart'
 const TOKEN_KEY = 'token_login'
 const VAT_RATE = 0.18

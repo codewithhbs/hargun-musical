@@ -14,7 +14,7 @@ const Hero = () => {
             try {
                 setLoading(true);
                 const response = await axios.get(
-                    "http://localhost:7500/api/v1/admin/get/hero_page"
+                    "https://api.hargunmusicals.com/api/v1/admin/get/hero_page"
                 );
                 setHeroPageData(response.data.data);
                 setLoading(false);
@@ -34,7 +34,7 @@ const Hero = () => {
     const updateHeroPageData = async () => {
         try {
             setLoading(true);
-            await axios.post("http://localhost:7500/api/v1/admin/create_and_update/hero_page", heroPageData);
+            await axios.post("https://api.hargunmusicals.com/api/v1/admin/create_and_update/hero_page", heroPageData);
             setIsEditable(false); // Exit edit mode after update
             setLoading(false);
         } catch (error) {

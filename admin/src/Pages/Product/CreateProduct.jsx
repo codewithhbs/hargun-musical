@@ -77,7 +77,7 @@ const CreateProduct = () => {
   const fetchCategoryData = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:7500/api/v1/admin/category",
+        "https://api.hargunmusicals.com/api/v1/admin/category",
       );
       const data = res.data.categories;
 
@@ -100,7 +100,7 @@ const CreateProduct = () => {
 
   const handleFetchBrand = async () => {
     try {
-      const res = await axios.get("http://localhost:7500/api/v1/admin/brand");
+      const res = await axios.get("https://api.hargunmusicals.com/api/v1/admin/brand");
       const data = res.data.data;
       if (data) {
         setAllBrands(data);
@@ -209,7 +209,7 @@ const CreateProduct = () => {
 
     try {
       const data = await axios.post(
-        "http://localhost:7500/api/v1/add-new-product",
+        "https://api.hargunmusicals.com/api/v1/add-new-product",
         formDataObject,
         {
           headers: {

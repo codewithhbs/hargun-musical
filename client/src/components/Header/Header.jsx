@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect, useCallback } from "react";
 import logo from "./logo3.png";
 import axios from "axios";
 
-const API_BASE = "http://localhost:7500/api/v1";
+const API_BASE = "https://api.hargunmusicals.com/api/v1";
 
 // ─── Debounce hook ─────────────────────────────────────────────────────────────
 const useDebounce = (value, delay = 400) => {

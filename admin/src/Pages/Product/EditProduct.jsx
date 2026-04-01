@@ -101,7 +101,7 @@ const EditProduct = () => {
 
   const handleFetchBrand = async () => {
     try {
-      const res = await axios.get("http://localhost:7500/api/v1/admin/brand");
+      const res = await axios.get("https://api.hargunmusicals.com/api/v1/admin/brand");
       const data = res.data.data;
       if (data) {
         setAllBrands(data);
@@ -136,7 +136,7 @@ const EditProduct = () => {
   const fetchCategoryData = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:7500/api/v1/admin/category",
+        "https://api.hargunmusicals.com/api/v1/admin/category",
       );
       const data = res.data.categories;
 
@@ -251,7 +251,7 @@ const EditProduct = () => {
   const handleFetchProductDetails = async () => {
     try {
       const { data } = await axios.get(
-        `http://localhost:7500/api/v1/get-product/${id}`,
+        `https://api.hargunmusicals.com/api/v1/get-product/${id}`,
       );
       const productData = data?.data;
 
@@ -349,7 +349,7 @@ const EditProduct = () => {
       });
 
       const { data } = await axios.post(
-        `http://localhost:7500/api/v1/update-product/${id}`,
+        `https://api.hargunmusicals.com/api/v1/update-product/${id}`,
         formDataObject,
         {
           headers: {

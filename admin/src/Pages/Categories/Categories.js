@@ -18,7 +18,7 @@ const Categories = () => {
     const fetchCategories = async () => {
         setLoading(true);
         try {
-            const response = await axios.get('http://localhost:7500/api/v1/admin/category');
+            const response = await axios.get('https://api.hargunmusicals.com/api/v1/admin/category');
 
             if (response.data.categories) {
                 setData(response.data.categories);
@@ -37,7 +37,7 @@ const Categories = () => {
         if (window.confirm("Are you sure you want to delete this category?")) {
             setLoading(true);
             try {
-                await axios.delete(`http://localhost:7500/api/v1/admin/category-del/${id}`);
+                await axios.delete(`https://api.hargunmusicals.com/api/v1/admin/category-del/${id}`);
                 toast.promise(
                     fetchCategories(),
                     {
@@ -68,7 +68,7 @@ const Categories = () => {
         setLoading(true);
         try {
             await axios.post(
-                `http://localhost:7500/api/v1/admin/create/category`,
+                `https://api.hargunmusicals.com/api/v1/admin/create/category`,
                 { name }
             );
             fetchCategories();
@@ -90,7 +90,7 @@ const Categories = () => {
         setLoading(true);
         try {
             await axios.put(
-                `http://localhost:7500/api/v1/admin/category/edit/${selectedCategory}`,
+                `https://api.hargunmusicals.com/api/v1/admin/category/edit/${selectedCategory}`,
                 { name }
             );
             fetchCategories();
@@ -110,7 +110,7 @@ const Categories = () => {
         setLoading(true);
         try {
             await axios.post(
-                `http://localhost:7500/api/v1/admin/create/sub-category/${selectedCategory}`,
+                `https://api.hargunmusicals.com/api/v1/admin/create/sub-category/${selectedCategory}`,
                 { name }
             );
             toast.success("Sub Category Added successfully")

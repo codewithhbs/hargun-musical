@@ -30,7 +30,7 @@ const MyDetail = () => {
     try {
       setLoading(true);
       const { data } = await axios.get(
-        "http://localhost:7500/api/v1/my-details",
+        "https://api.hargunmusicals.com/api/v1/my-details",
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -70,7 +70,7 @@ const MyDetail = () => {
     try {
       setUpdating(true);
       const { data } = await axios.put(
-        "http://localhost:7500/api/v1/update-user-profile",
+        "https://api.hargunmusicals.com/api/v1/update-user-profile",
         formData,
         {
           headers: { Authorization: `Bearer ${token}` },
@@ -111,7 +111,7 @@ const MyDetail = () => {
 
     try {
       const { data } = await axios.post(
-        "http://localhost:7500/api/v1/Password-Change-Request",
+        "https://api.hargunmusicals.com/api/v1/Password-Change-Request",
         {
           Email: email,
           currentPassword,
@@ -141,7 +141,7 @@ const MyDetail = () => {
     setMessage("");
     try {
       const { data } = await axios.post(
-        "http://localhost:7500/api/v1/resend-otp",
+        "https://api.hargunmusicals.com/api/v1/resend-otp",
         {
           email,
           type: "password_reset",
@@ -170,7 +170,7 @@ const MyDetail = () => {
 
     try {
       const { data } = await axios.post(
-        "http://localhost:7500/api/v1/verify-otp",
+        "https://api.hargunmusicals.com/api/v1/verify-otp",
         {
           email,
           otp,

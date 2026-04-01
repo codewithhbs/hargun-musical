@@ -395,7 +395,7 @@ const Forget = () => {
   // ── Call /Password-Change-Request ───────────────────────────────────
   const callAPI = async () => {
     const res = await fetch(
-      "http://localhost:7500/api/v1/Password-Change-Request",
+      "https://api.hargunmusicals.com/api/v1/Password-Change-Request",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },

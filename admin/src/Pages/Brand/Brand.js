@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const API = "http://localhost:7500/api/v1/admin";
+const API = "https://api.hargunmusicals.com/api/v1/admin";
 
 const Brand = () => {
   const [data, setData] = useState([]);

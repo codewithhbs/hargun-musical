@@ -22,8 +22,8 @@ const EditAboutUs = () => {
   const [loading, setLoading] = useState(false);
   const [expandedSections, setExpandedSections] = useState({});
 
-  const getUrl = "http://localhost:7500/api/v1/get-about";
-  const editUrl = "http://localhost:7500/api/v1/create-or-update-about";
+  const getUrl = "https://api.hargunmusicals.com/api/v1/get-about";
+  const editUrl = "https://api.hargunmusicals.com/api/v1/create-or-update-about";
 
   useEffect(() => {
     fetchAboutData();

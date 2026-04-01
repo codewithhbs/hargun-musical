@@ -14,7 +14,7 @@ const SubCategory = ({ isOpen = true, onClose, selectedCategory }) => {
     const fetchCategories = async () => {
         setLoading(true);
         try {
-            const response = await axios.get(`http://localhost:7500/api/v1/admin/sub-category/${selectedCategory}`);
+            const response = await axios.get(`https://api.hargunmusicals.com/api/v1/admin/sub-category/${selectedCategory}`);
             if (response.data.subcategories) {
                 setSubCategories(response.data.subcategories);
             } else {
@@ -31,7 +31,7 @@ const SubCategory = ({ isOpen = true, onClose, selectedCategory }) => {
     const updateSubCategory = async (subCategoryId) => {
         setLoading(true);
         try {
-            await axios.put(`http://localhost:7500/api/v1/admin/sub-category/edit/${subCategoryId}`, { name });
+            await axios.put(`https://api.hargunmusicals.com/api/v1/admin/sub-category/edit/${subCategoryId}`, { name });
 
             toast.success('Subcategory updated successfully');
             fetchCategories()
@@ -47,7 +47,7 @@ const SubCategory = ({ isOpen = true, onClose, selectedCategory }) => {
         if (window.confirm('Are you sure you want to delete this subcategory?')) {
             setLoading(true);
             try {
-                await axios.delete(`http://localhost:7500/api/v1/admin/sub-category/delete/${subCategoryId}`);
+                await axios.delete(`https://api.hargunmusicals.com/api/v1/admin/sub-category/delete/${subCategoryId}`);
                 toast.success('Subcategory deleted successfully');
                 fetchCategories()
             } catch (error) {

@@ -4,7 +4,7 @@ import { toast } from "react-hot-toast";
 import { Star, Edit2, Trash2, X, MessageSquare, User, Package, ThumbsUp } from "lucide-react";
 
 const TestimonialGet = () => {
-  const baseUrl = "http://localhost:7500/api/v1/testimonial";
+  const baseUrl = "https://api.hargunmusicals.com/api/v1/testimonial";
   const [testimonials, setTestimonials] = useState([]);
   const [loading, setLoading] = useState(false);
   const [selectedTestimonial, setSelectedTestimonial] = useState(null);

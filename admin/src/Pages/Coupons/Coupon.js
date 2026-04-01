@@ -26,7 +26,7 @@ const Coupon = () => {
   const fetchCoupons = async () => {
     try {
       setLoading(true);
-      const response = await axios.get('http://localhost:7500/api/v1/get-coupon');
+      const response = await axios.get('https://api.hargunmusicals.com/api/v1/get-coupon');
       setAllCoupons(response.data.data);
       setLoading(false);
     } catch (error) {
@@ -39,9 +39,9 @@ const Coupon = () => {
     try {
       setLoading(true);
       if (type === 'edit') {
-        await axios.post(`http://localhost:7500/api/v1/update-coupon/${selectedCoupon?.code}`, formData);
+        await axios.post(`https://api.hargunmusicals.com/api/v1/update-coupon/${selectedCoupon?.code}`, formData);
       } else {
-        await axios.post('http://localhost:7500/api/v1/add-coupon', formData);
+        await axios.post('https://api.hargunmusicals.com/api/v1/add-coupon', formData);
       }
       setSuccess('Coupon saved successfully!');
       setLoading(false);
@@ -57,7 +57,7 @@ const Coupon = () => {
   const deleteCoupon = async (code) => {
     try {
       setLoading(true);
-      await axios.delete(`http://localhost:7500/api/v1/delete-coupon/${code}`);
+      await axios.delete(`https://api.hargunmusicals.com/api/v1/delete-coupon/${code}`);
       setSuccess('Coupon deleted successfully!');
       setLoading(false);
       fetchCoupons();

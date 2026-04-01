@@ -869,7 +869,7 @@ const ProductDetail = () => {
     const fetchProduct = async () => {
       try {
         const { data } = await axios.get(
-          `http://localhost:7500/api/v1/get-product-by-slug/${slug}`,
+          `https://api.hargunmusicals.com/api/v1/get-product-by-slug/${slug}`,
         );
         setProductData(data.data);
         if (data.data?.isVarient && data.data?.Varient?.length > 0) {
@@ -891,7 +891,7 @@ const ProductDetail = () => {
     const fetchRelated = async () => {
       try {
         const { data } = await axios.get(
-          `http://localhost:7500/api/v1/get-product-by-category-slug/${productData.category.slug}`,
+          `https://api.hargunmusicals.com/api/v1/get-product-by-category-slug/${productData.category.slug}`,
         );
         const filtered = (data.products || []).filter(
           (p) => p._id !== productData._id,

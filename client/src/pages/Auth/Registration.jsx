@@ -284,7 +284,7 @@ const Registration = ({ onClose }) => {
 
     try {
       const response = await axios.post(
-        "http://localhost:7500/api/v1/regsiter-user", // keeping exact typo from API spec
+        "https://api.hargunmusicals.com/api/v1/regsiter-user", // keeping exact typo from API spec
         {
           Name: formData.Name,
           Email: formData.Email,

@@ -39,7 +39,7 @@ function Reports() {
     try {
       setLoading(true);
       setError('');
-      const response = await axios.post('http://localhost:7500/api/v1/get-reports', {
+      const response = await axios.post('https://api.hargunmusicals.com/api/v1/get-reports', {
         reportType,
         startDate: dateRange.startDate,
         endDate: dateRange.endDate

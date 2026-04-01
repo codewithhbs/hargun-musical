@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Subscribe from "../../components/Subscribe/Subscribe";
 import axios from "axios";
 
-const API_BASE = "http://localhost:7500/api/v1";
+const API_BASE = "https://api.hargunmusicals.com/api/v1";
 
 // ─── Static Data ──────────────────────────────────────────────────────────────
 const contactInfo = [

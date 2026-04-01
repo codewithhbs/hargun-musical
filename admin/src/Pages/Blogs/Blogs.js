@@ -5,7 +5,7 @@ import { toast } from "react-hot-toast";
 import { Pencil, Trash2, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const Blogs = () => {
-    const baseUrl = "http://localhost:7500/api/v1/blog";
+    const baseUrl = "https://api.hargunmusicals.com/api/v1/blog";
     const [blogs, setBlogs] = useState([]);
     const [loading, setLoading] = useState(false);
     const [showModal, setShowModal] = useState(false);

@@ -8,7 +8,7 @@ const Footer = () => {
   const handleFetchCategory = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:7500/api/v1/admin/category",
+        "https://api.hargunmusicals.com/api/v1/admin/category",
       );
       setAllCategory(data.categories);
     } catch (error) {

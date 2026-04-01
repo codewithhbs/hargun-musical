@@ -46,7 +46,7 @@ export default function DashboardPage() {
   const [recentOrders,setRecentOrders] = useState([])
   const fetchOrders = async()=>{
     try {
-      const response = await axios.get('http://localhost:7500/api/v1/get-recent-orders')
+      const response = await axios.get('https://api.hargunmusicals.com/api/v1/get-recent-orders')
       console.log("response",response.data.data)
       setRecentOrders(response.data.data)
     } catch (error) {

@@ -17,7 +17,7 @@ const Support = () => {
     const fetchData = async () => {
         setLoading(true);
         try {
-            const response = await axios.get('http://localhost:7500/api/v1/admin/support-request/all');
+            const response = await axios.get('https://api.hargunmusicals.com/api/v1/admin/support-request/all');
             setData(response.data.data); // All data
             setFilteredData(response.data.data); // Initially set filtered data as all data
         } catch (error) {

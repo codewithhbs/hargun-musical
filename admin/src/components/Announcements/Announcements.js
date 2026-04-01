@@ -3,7 +3,7 @@ import axios from "axios";
 import { Plus, Pencil, Trash2, X, Loader2, AlertCircle } from "lucide-react";
 
 const Announcements = () => {
-  const base_url = `http://localhost:7500/api/v1`;
+  const base_url = `https://api.hargunmusicals.com/api/v1`;
   const [announcements, setAnnouncements] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");

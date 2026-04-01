@@ -4,7 +4,7 @@ import axios from "axios";
 import { toast } from "react-hot-toast";
 
 const CreateBlogs = () => {
-  const url = `http://localhost:7500/api/v1/blog`;
+  const url = `https://api.hargunmusicals.com/api/v1/blog`;
 
   const [formData, setFormData] = useState({
     meta_title: "",

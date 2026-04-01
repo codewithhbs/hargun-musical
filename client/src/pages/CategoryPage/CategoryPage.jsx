@@ -83,7 +83,7 @@ const CategoryPage = () => {
   const handleFetchProducts = async (page = 1) => {
     try {
       const { data } = await axios.get(
-        `http://localhost:7500/api/v1/get-product-by-category-slug/${slug}?page=${page}&limit=${limit}`,
+        `https://api.hargunmusicals.com/api/v1/get-product-by-category-slug/${slug}?page=${page}&limit=${limit}`,
       );
 
       setProducts(data.products);

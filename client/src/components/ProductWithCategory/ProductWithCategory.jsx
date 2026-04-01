@@ -139,7 +139,7 @@ const ProductWithCategory = () => {
     const fetchCategories = async () => {
       try {
         const { data } = await axios.get(
-          "http://localhost:7500/api/v1/admin/category",
+          "https://api.hargunmusicals.com/api/v1/admin/category",
         );
         const cats = data.categories || [];
         setAllCategories(cats);
@@ -164,7 +164,7 @@ const ProductWithCategory = () => {
       setLoadingProducts(true);
       try {
         const { data } = await axios.get(
-          `http://localhost:7500/api/v1/get-product-by-category-slug/${activeCategory}`,
+          `https://api.hargunmusicals.com/api/v1/get-product-by-category-slug/${activeCategory}`,
         );
         setAllProducts(data.products || []);
       } catch (error) {
