@@ -16,6 +16,10 @@ const corsOptions = {
         "http://localhost:5173",
         "http://localhost:3000",
         "http://localhost:3001",
+        "https://hargunmusicals.com",
+        "https://www.hargunmusicals.com",
+        "https://admin.hargunmusicals.com",
+        "https://www.admin.hargunmusicals.com"
     ],
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
