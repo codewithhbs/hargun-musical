@@ -681,7 +681,7 @@ const RelatedSlider = ({ products = [] }) => {
       else if (w < 769) setSlidesPerView(2);
       else if (w < 1025) setSlidesPerView(3);
       else if (w < 1441) setSlidesPerView(4);
-      else setSlidesPerView(5);
+      else setSlidesPerView(4);
     };
     update();
     window.addEventListener("resize", update);
