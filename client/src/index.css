@@ -1,0 +1,49 @@
+.swiper-pagination-bullet-active{
+    width: 40px !important;
+    background-color: #088178 !important;
+    /* height: 10px !important; */
+    /* border-radius: 35% !important; */
+    border-top-left-radius: 10px !important;
+    border-top-right-radius: 10px !important;
+    border-bottom-left-radius: 10px !important;
+    border-bottom-right-radius: 10px !important;
+}
+
+/* .swiper-pagination-bullet{
+    width: 30px !important;
+    border-radius: 30% !important;
+} */
+
+.slider-height{
+    height: 740px;
+}
+
+@media (max-width:600px) {
+    .slider-height{
+        height: 400px;
+    }
+}
+
+.swiper-button-prev{
+    color: #088178 !important;
+}
+
+.swiper-button-next{
+    color: #088178 !important;
+}
+
+.logo-class{
+    width: 114px;
+}
+
+.bg-green-600{
+    background-color: #088178;
+}
+
+.profile-btn:hover{
+    background-color: #088178;
+}
+
+.bg-red-500{
+    background-color: #ff4757;
+}
